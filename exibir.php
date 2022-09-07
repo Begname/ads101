@@ -13,11 +13,18 @@
 
 	<?php
 
-		$quantidade = $_POST['quantidade'];
-		echo $quantidade;
-		for($i = 1; $i <= $quantidade; $i++)
+		$quantidade_linhas = $_POST['quantidade_linhas'];
+		$quantidade_colunas = $_POST['quantidade_colunas'];
+		echo $quantidade_linhas;
+		//echo ",";
+		echo $quantidade_colunas;
+		for($i = 1; $i <= $quantidade_linhas; $i++)
 		{
-		echo "<tr><td>Linha $i</td><td>Linha $i</td><td>Linha $i</td><td>Linha $i</td></tr>";
+		echo "<tr>";
+		for($c = 1; $c <= $quantidade_colunas; $c++){
+		echo "<td>Linha $i Coluna $c</td><td>Linha $i Coluna $c</td><td>Linha $i Coluna $c</td><td>Linha $i Coluna $c</td>"
+		}
+		"</tr>";
 		}
 	?>
 
